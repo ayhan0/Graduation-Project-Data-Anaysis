@@ -85,3 +85,6 @@ def create_plot(symbol):
 #
 #interact(create_plot,symbol= deneme)
 interact(create_plot,symbol= deneme)
+#Extracting the new dataframe into the Excel Sheet 
+with pd.ExcelWriter("Weekly_Datas_Uruguay2.xlsx") as writer:
+    final_data.to_excel(writer,sheet_name = "Sayfa2")
